@@ -1,0 +1,24 @@
+create table employee(
+	Employee_id serial primary key,
+	SalesPerson varchar(20),
+	DoB date
+);
+
+create table sales_office(
+	id serial primary key,
+	Street integer,
+	City varchar(20),
+	State varchar(2)
+);
+
+create table customers(
+	id serial primary key,
+	CustomerName varchar(20)
+);
+
+create table sales_record(
+	sales_id serial primary key
+	employee_id int foreign key references employee(Employee_id),
+	sales_office_id int foreign key references sales_office(id),
+	customer_id int foreign key references customers(id) 
+);
