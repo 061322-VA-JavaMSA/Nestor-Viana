@@ -1,0 +1,8 @@
+Hatim: Went through a coding coding bootcamp for front end devolpment. He'd like to build his own chatting system 
+
+Angel: is NOT lactose intolerant. Majored in computer science; he took Java and SQL in his program, but it was rushed. Likes pokemon;
+	started playing in 5th generation, and followed the franchise up until Sword and Shield, and still plays pokemon GO.
+
+Kevin: Has done most progress in our group. Went through a similar program as Revature. Focused primarily on Python, though it was full-stack development.
+
+Nestor: IS lactose intolerant -- thought he shared that in common with Angel ( >:[ ) Average at chess and likes classical music and EDM.
