@@ -9,6 +9,15 @@ public class Customer {
 	private String lastname;
 	private String username;
 	private String password;
+	
+	public Customer(String firstname, String lastname, String username, String password) {
+		super();
+		this.firstname = firstname;
+		this.lastname = lastname;
+		this.username = username;
+		this.password = password;
+	}
+	
 	public int getId() {
 		return id;
 	}

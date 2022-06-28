@@ -1,0 +1,15 @@
+body {
+    color: blueviolet;
+}
+
+.me {
+    color: aqua;
+}
+
+#meId{
+    color: red;
+}
+
+#hw{
+    border: 5px solid rgb(78, 56, 56);
+}
