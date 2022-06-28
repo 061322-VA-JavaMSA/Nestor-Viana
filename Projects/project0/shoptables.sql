@@ -13,7 +13,7 @@ create table users(
 	id serial primary key,
 	firstname varchar(15) not null,
 	lastname varchar(15) not null,
-	username varchar(15) not null,
+	username varchar(15) unique not null,
 	password varchar(15) not null,
 	role_type integer default(3)
 );
@@ -24,13 +24,14 @@ insert into users (firstname, lastname, username, password) values ('Jeno', 'Jow
 insert into users (firstname, lastname, username, password) values ('Rycca', 'MacKeig', 'rmackeig2', '8f1QVjpJ');
 insert into users (firstname, lastname, username, password) values ('Renell', 'Offener', 'roffener3', 'BsLMXycPmar');
 insert into users (firstname, lastname, username, password) values ('Taffy', 'Ridgley', 'tridgley4', '9aOsShw3EV');
+insert into users (firstname, lastname, username, password) values ('user', 'pass', 'user', 'pass');
 
 drop table if exists employees;
 create table employees(
 	id serial primary key,
 	firstname varchar(15) not null,
 	lastname varchar(15) not null,
-	username varchar(15) not null,
+	username varchar(15) unique not null,
 	password varchar(15) not null,
 	role_type integer default(2)
 );
@@ -38,6 +39,7 @@ create table employees(
 insert into employees (firstname, lastname, username, password) values ('Thain', 'Blakiston', 'tblakiston0', 'XV4Asj');
 insert into employees (firstname, lastname, username, password) values ('Farr', 'Peller', 'fpeller1', 'XSOSRLZ');
 insert into employees (firstname, lastname, username, password) values ('Abby', 'Worster', 'aworster2', 'Bbe7FBDJO');
+
 
 drop table if exists system;
 create table system(
@@ -54,7 +56,26 @@ select * from users u where id=1;
 drop table if exists menu;
 create table menu(
 	id serial primary key,
-	itemname varchar(20) not null,
-	itemprice float not null,
-	servingsleft integer not null
+	item_name varchar(20) unique not null,
+	item_description varchar(50) not null,
+	item_price float not null
 );
+
+insert into menu (item_name, item_description, item_price) values ('small ice cream cup','2 scoops of same flavor', 3.60);
+insert into menu (item_name, item_description, item_price) values ('large ice cream cup','4 scoops of two different flavors', 5.00);
+insert into menu (item_name, item_description, item_price) values ('ice cream cone', '4 scoops of two different flavors on a wafer cone', 5.60);
+
+drop table if exists flavors;
+create table flavors(
+	id serial primary key,
+	flavor varchar(20) unique not null
+);
+
+insert into flavors (flavor) values ('chocolate');
+insert into flavors (flavor) values ('vanilla');
+insert into flavors (flavor) values ('strawberry');
+insert into flavors (flavor) values ('cookies & cream');
+insert into flavors (flavor) values ('mint chocolate chip');
+insert into flavors (flavor) values ('neapolitan');
+insert into flavors (flavor) values ('pistachio');
+insert into flavors (flavor) values ('rocky road');
