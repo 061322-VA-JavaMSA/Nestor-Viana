@@ -8,8 +8,8 @@ insert into roles(role) values('system');
 insert into roles(role) values('employee');
 insert into roles(role) values('customer');
 
-drop table if exists users;
-create table users(
+drop table if exists customers;
+create table customers(
 	id serial primary key,
 	firstname varchar(15) not null,
 	lastname varchar(15) not null,
@@ -19,12 +19,12 @@ create table users(
 );
 
 --mock data
-insert into users (firstname, lastname, username, password) values ('Natal', 'Summerlie', 'nsummerlie0', '0nycXpoQ');
-insert into users (firstname, lastname, username, password) values ('Jeno', 'Jowsey', 'jjowsey1', '4EaIoG');
-insert into users (firstname, lastname, username, password) values ('Rycca', 'MacKeig', 'rmackeig2', '8f1QVjpJ');
-insert into users (firstname, lastname, username, password) values ('Renell', 'Offener', 'roffener3', 'BsLMXycPmar');
-insert into users (firstname, lastname, username, password) values ('Taffy', 'Ridgley', 'tridgley4', '9aOsShw3EV');
-insert into users (firstname, lastname, username, password) values ('user', 'pass', 'user', 'pass');
+insert into customers (firstname, lastname, username, password) values ('Natal', 'Summerlie', 'nsummerlie0', '0nycXpoQ');
+insert into customers (firstname, lastname, username, password) values ('Jeno', 'Jowsey', 'jjowsey1', '4EaIoG');
+insert into customers (firstname, lastname, username, password) values ('Rycca', 'MacKeig', 'rmackeig2', '8f1QVjpJ');
+insert into customers (firstname, lastname, username, password) values ('Renell', 'Offener', 'roffener3', 'BsLMXycPmar');
+insert into customers (firstname, lastname, username, password) values ('Taffy', 'Ridgley', 'tridgley4', '9aOsShw3EV');
+insert into customers (firstname, lastname, username, password) values ('user', 'pass', 'user', 'pass');
 
 drop table if exists employees;
 create table employees(
@@ -61,7 +61,7 @@ create table menu(
 	item_price float not null
 );
 
-insert into menu (item_name, item_description, item_price) values ('small ice cream cup','2 scoops of same flavor', 3.60);
+insert into menu (item_name, item_description, item_price) values ('small ice cream cup','2 scoops of two different flavors', 3.60);
 insert into menu (item_name, item_description, item_price) values ('large ice cream cup','4 scoops of two different flavors', 5.00);
 insert into menu (item_name, item_description, item_price) values ('ice cream cone', '4 scoops of two different flavors on a wafer cone', 5.60);
 
@@ -79,3 +79,18 @@ insert into flavors (flavor) values ('mint chocolate chip');
 insert into flavors (flavor) values ('neapolitan');
 insert into flavors (flavor) values ('pistachio');
 insert into flavors (flavor) values ('rocky road');
+
+--drop table if exists menu_flavors;
+--create table menu_flavors(
+--	id serial primary key,
+--	
+--);
+
+drop table if exists orders;
+create table orders( 
+	id serial primary key,
+	customerUsername varchar(20) not null,
+	menuId int not null references menu(id),
+	flavor1Id int not null references flavors(id),
+	flavor2Id int not null references flavors(id)
+);
