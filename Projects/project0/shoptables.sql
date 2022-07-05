@@ -39,6 +39,7 @@ create table employees(
 insert into employees (firstname, lastname, username, password) values ('Thain', 'Blakiston', 'tblakiston0', 'XV4Asj');
 insert into employees (firstname, lastname, username, password) values ('Farr', 'Peller', 'fpeller1', 'XSOSRLZ');
 insert into employees (firstname, lastname, username, password) values ('Abby', 'Worster', 'aworster2', 'Bbe7FBDJO');
+insert into employees (firstname, lastname, username, password) values ('employee', 'r', 'employee', 'pass');
 
 
 drop table if exists system;
@@ -68,7 +69,7 @@ insert into menu (item_name, item_description, item_price) values ('ice cream co
 drop table if exists flavors;
 create table flavors(
 	id serial primary key,
-	flavor varchar(20) unique not null
+	flavor varchar(20) unique
 );
 
 insert into flavors (flavor) values ('chocolate');
@@ -80,17 +81,28 @@ insert into flavors (flavor) values ('neapolitan');
 insert into flavors (flavor) values ('pistachio');
 insert into flavors (flavor) values ('rocky road');
 
---drop table if exists menu_flavors;
---create table menu_flavors(
---	id serial primary key,
---	
---);
 
 drop table if exists orders;
 create table orders( 
-	id serial primary key,
-	customerUsername varchar(20) not null,
-	menuId int not null references menu(id),
-	flavor1Id int not null references flavors(id),
-	flavor2Id int not null references flavors(id)
+	order_id serial primary key,
+	customer_id int,
+	menu_id int,
+	flavor1_id int,
+	flavor2_id int
 );
+
+--insert into orders (customer_id, menu_id, flavor1_id, flavor2_id) values (1,2,3,4)
+
+select o.order_id, c.username , f1.flavor as flavor_1, f2.flavor as flavor_2  
+from orders o 
+join customers c on o.customer_id = c.id 
+join flavors f1 on o.flavor1_id = f1.id
+join flavors f2 on o.flavor2_id = f2.id
+where c.id = 6 order by o.order_id;
+
+delete from menu where id between 4 and 15;
+insert into menu (item_name, item_description, item_price) values ('aaa','aaa',4.2);
+insert into menu (item_name, item_description, item_price) values ('bbb','bbb',4.2);
+insert into employees (firstname, lastname, username, password) values('Camila', 'Turo', 'cturo', '1234');
+
+drop table menu_flavors;
