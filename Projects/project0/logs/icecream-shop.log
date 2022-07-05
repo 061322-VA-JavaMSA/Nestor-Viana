@@ -19,3 +19,112 @@
 08:09:41 [main] INFO  com.revature.misc.MainMenu - Login successful, user: aaa
 08:09:43 [main] ERROR com.revature.services.CustomerService - SQL Exception was thrown. org.postgresql.util.PSQLException: ERROR: column "aaa" does not exist
   Position: 47
+11:15:16 [main] INFO  com.revature.misc.MainMenu - Login successful, user: Nest
+11:16:01 [main] INFO  com.revature.services.CustomerService - OrderOrder [id=2, customerUsername=Nest, item_id=1, flavor1_id=3, flavor2_id=4] successfully queued!
+12:42:49 [main] INFO  com.revature.services.CustomerService - AccountCustomer [id=10, firstname=Nestor, lastname=Viana, username=Nest01, password=g00se] successfully created!
+12:43:16 [main] INFO  com.revature.services.CustomerService - AccountCustomer [id=11, firstname=Nestor, lastname=Viana, username=Nest02, password=aasdf] successfully created!
+12:43:51 [main] INFO  com.revature.misc.MainMenu - Login successful, user: Nest02
+12:44:23 [main] INFO  com.revature.services.CustomerService - OrderOrder [id=3, customerUsername=Nest02, item_id=2, flavor1_id=1, flavor2_id=3] successfully queued!
+21:01:26 [main] INFO  com.revature.misc.MainMenu - Login successful, user: Nest
+21:06:29 [main] ERROR com.revature.misc.MainMenu - Login exception was thrown. com.revature.exceptions.LoginException
+21:06:45 [main] INFO  com.revature.misc.MainMenu - Login successful, user: Nest
+21:07:06 [main] INFO  com.revature.services.CustomerService - OrderOrder [order_id=0, customer_id=7, item_id=2, flavor1_id=1, flavor2_id=7] successfully queued!
+21:19:10 [main] INFO  com.revature.misc.MainMenu - Login successful, user: user
+21:31:07 [main] INFO  com.revature.misc.MainMenu - Login successful, user: user
+21:32:36 [main] INFO  com.revature.misc.MainMenu - Login successful, user: user
+21:33:04 [main] INFO  com.revature.services.CustomerService - Order [order_id=0, customer_id=6, item_id=2, flavor1_id=5, flavor2_id=6] successfully queued!
+21:36:54 [main] INFO  com.revature.misc.MainMenu - Login successful, user: user
+21:37:13 [main] INFO  com.revature.services.CustomerService - Order [order_id=0, customer_id=6, item_id=2, flavor1_id=3, flavor2_id=5] successfully queued!
+21:38:48 [main] INFO  com.revature.services.CustomerService - Logging out of your account, user. Thanks for checking out RevatureRobins. Have a great day!
+21:39:35 [main] INFO  com.revature.misc.MainMenu - Login successful, user: user
+21:39:48 [main] INFO  com.revature.services.CustomerService - Order [order_id=1, customer_id=6, item_id=1, flavor1_id=4, flavor2_id=6] successfully queued!
+21:41:32 [main] INFO  com.revature.misc.MainMenu - Login successful, user: user
+21:41:59 [main] INFO  com.revature.misc.MainMenu - Login successful, user: user
+21:42:07 [main] INFO  com.revature.services.CustomerService - Order [order_id=2, customer_id=6, item_id=1, flavor1_id=6, flavor2_id=4] successfully queued!
+21:42:14 [main] INFO  com.revature.services.CustomerService - Logging out of your account, user. Thanks for checking out RevatureRobins. Have a great day!
+22:34:55 [main] INFO  com.revature.misc.MainMenu - Login successful, user: user
+22:35:02 [main] INFO  com.revature.services.CustomerService - Order [order_id=3, customer_id=6, item_id=3, flavor1_id=7, flavor2_id=4] successfully queued!
+22:38:16 [main] INFO  com.revature.misc.MainMenu - Login successful, user: user
+22:44:17 [main] INFO  com.revature.misc.MainMenu - Login successful, user: user
+22:50:18 [main] INFO  com.revature.misc.MainMenu - Login successful, user: user
+23:04:38 [main] INFO  com.revature.services.CustomerService - AccountCustomer [id=7, firstname=Jazmin, lastname=Zabala, username=jazz, password=jazz] successfully created!
+23:07:42 [main] INFO  com.revature.services.CustomerService - AccountCustomer [id=8, firstname=Lucas, lastname=Cal, username=lcal, password=123] successfully created!
+23:09:25 [main] INFO  com.revature.services.CustomerService - AccountCustomer [id=9, firstname=dlskfgj, lastname=aalskfsl, username=eorwt, password=123] successfully created!
+23:14:22 [main] INFO  com.revature.services.CustomerService - AccountCustomer [id=10, firstname=dsfg, lastname=ert, username=fgjd, password=rtye] successfully created!
+23:15:46 [main] INFO  com.revature.services.CustomerService - AccountCustomer [id=11, firstname=sfhg, lastname=dfs54, username=346345, password=2345] successfully created!
+23:16:36 [main] INFO  com.revature.services.CustomerService - AccountCustomer [id=12, firstname=sdfg, lastname=sdfg, username=dfhg, password=345] successfully created!
+23:17:37 [main] INFO  com.revature.services.CustomerService - AccountCustomer [id=13, firstname=sdfh, lastname=dhjfg, username=cvncv, password=ytjtyurty] successfully created!
+23:19:50 [main] INFO  com.revature.services.CustomerService - AccountCustomer [id=14, firstname=asgsdfg, lastname=xcvbxcv, username=sdfgsdfh, password=dsfgb] successfully created!
+23:21:57 [main] INFO  com.revature.services.CustomerService - AccountCustomer [id=15, firstname=asdf, lastname=sdfbv, username=dfgerht, password=gfjfghj] successfully created!
+23:25:15 [main] INFO  com.revature.services.CustomerService - AccountCustomer [id=16, firstname=sadnj, lastname=djfng, username=ksjdfnvj, password=sjkdvn] successfully created!
+23:26:11 [main] INFO  com.revature.services.CustomerService - AccountCustomer [id=17, firstname=askldgl, lastname=sdkfjnk, username=kdjsfnvkjsdnfv, password=kkasjdnf] successfully created!
+23:38:01 [main] INFO  com.revature.misc.MainMenu - Login successful, user: jazz
+23:38:26 [main] INFO  com.revature.misc.MainMenu - Login successful, user: jazz
+23:39:05 [main] INFO  com.revature.services.CustomerService - Order [order_id=4, customer_id=7, item_id=2, flavor1_id=4, flavor2_id=7] successfully queued!
+23:39:58 [main] INFO  com.revature.services.CustomerService - Logging out of your account, jazz. Thanks for checking out RevatureRobins. Have a great day!
+03:19:02 [main] ERROR com.revature.misc.MainMenu - Login exception was thrown. com.revature.exceptions.LoginException
+03:19:29 [main] INFO  com.revature.services.CustomerService - AccountCustomer [id=18, firstname=Nestor, lastname=Viana, username=Nest, password=g00se] successfully created!
+03:21:08 [main] INFO  com.revature.services.CustomerService - AccountCustomer [id=19, firstname=sdfgsdg, lastname=sghdfg, username=asd, password=asd] successfully created!
+03:21:43 [main] INFO  com.revature.misc.MainMenu - Login successful, user: Nest
+03:22:23 [main] INFO  com.revature.services.CustomerService - Order [order_id=5, customer_id=18, item_id=2, flavor1_id=6, flavor2_id=3] successfully queued!
+03:22:38 [main] INFO  com.revature.services.CustomerService - Logging out of your account, Nest. Thanks for checking out RevatureRobins. Have a great day!
+03:23:28 [main] ERROR com.revature.misc.MainMenu - Login exception was thrown. com.revature.exceptions.LoginException
+03:24:55 [main] ERROR com.revature.misc.MainMenu - Login exception was thrown. com.revature.exceptions.LoginException
+03:26:46 [main] INFO  com.revature.misc.MainMenu - Login successful, user: rmackeig2
+03:26:50 [main] INFO  com.revature.services.CustomerService - Logging out of your account, rmackeig2. Thanks for checking out RevatureRobins. Have a great day!
+03:28:00 [main] INFO  com.revature.misc.MainMenu - Login successful, user: employee
+03:30:36 [main] INFO  com.revature.misc.MainMenu - Login successful, user: employee
+04:10:35 [main] INFO  com.revature.misc.MainMenu - Login successful, employee: employee
+04:12:58 [main] INFO  com.revature.misc.MainMenu - Login successful, employee: employee
+04:14:41 [main] INFO  com.revature.services.EmployeeService - New item 0) wafer cup	two scoops of two different flavors on a wafer cup | $6.00 added successfully.
+04:19:31 [main] INFO  com.revature.misc.MainMenu - Login successful, employee: employee
+04:19:59 [main] INFO  com.revature.services.EmployeeService - New item 0) wafer cup	two scoops of two different flavors on a wafer cup | $6.00 added successfully.
+04:21:26 [main] INFO  com.revature.misc.MainMenu - Login successful, employee: employee
+04:21:44 [main] INFO  com.revature.services.EmployeeService - New item 4) wafer cup	two scoops of two different flavors on a wafer cup | $6.00 added successfully.
+04:22:37 [main] INFO  com.revature.misc.MainMenu - Login successful, employee: employee
+04:23:47 [main] INFO  com.revature.services.EmployeeService - OLD ITEM: 4) wafer cup	two scoops of two different flavors on a wafer cup | $6.00
+04:23:47 [main] INFO  com.revature.services.EmployeeService - NEW ITEM: 0) 	wafer cup | $5.00
+04:24:58 [main] INFO  com.revature.misc.MainMenu - Login successful, employee: employee
+04:25:08 [main] INFO  com.revature.services.EmployeeService - New flavor 0) caramel added successfully.
+04:26:22 [main] INFO  com.revature.misc.MainMenu - Login successful, employee: employee
+04:26:29 [main] INFO  com.revature.services.EmployeeService - New flavor 0) caramel added successfully.
+04:27:01 [main] INFO  com.revature.misc.MainMenu - Login successful, employee: employee
+04:27:09 [main] INFO  com.revature.services.EmployeeService - New flavor 12) nutmeg added successfully.
+04:35:46 [main] INFO  com.revature.misc.MainMenu - Login successful, employee: employee
+04:39:18 [main] INFO  com.revature.misc.MainMenu - Login successful, employee: employee
+04:39:41 [main] INFO  com.revature.services.EmployeeService - New item 5) aaa	aaa | $4.00 added successfully.
+04:41:21 [main] INFO  com.revature.misc.MainMenu - Login successful, employee: employee
+04:42:00 [main] INFO  com.revature.services.EmployeeService - OLD ITEM: 4) 	wafer cup | $5.00
+04:42:00 [main] INFO  com.revature.services.EmployeeService - NEW ITEM: 0) wafer cup	2 scoops of two different flavors | $4.00
+04:43:46 [main] INFO  com.revature.misc.MainMenu - Login successful, employee: employee
+04:44:09 [main] INFO  com.revature.services.EmployeeService - OLD ITEM: 5) aaa	aaa | $4.00
+04:44:09 [main] INFO  com.revature.services.EmployeeService - NEW ITEM: 4) wafer cup	2 scoops of two different flavors | $4.00
+04:51:17 [main] INFO  com.revature.misc.MainMenu - Login successful, employee: employee
+04:52:21 [main] INFO  com.revature.services.EmployeeService - OLD ITEM: 5) aaa	aaa | $4.00
+04:52:21 [main] INFO  com.revature.services.EmployeeService - NEW ITEM: 5) large wafer cone	4 scoops of two different flavors | $6.00
+05:15:26 [main] INFO  com.revature.misc.MainMenu - Login successful, employee: employee
+05:15:42 [main] INFO  com.revature.services.EmployeeService - Item 5) large wafer cone	4 scoops of two different flavors | $6.00 deleted.
+05:19:13 [main] INFO  com.revature.misc.MainMenu - Login successful, employee: employee
+05:20:19 [main] INFO  com.revature.services.EmployeeService - New item 6) aaa	aaa | $3.00 added successfully.
+05:20:33 [main] INFO  com.revature.misc.MainMenu - Login successful, employee: employee
+05:20:46 [main] INFO  com.revature.services.EmployeeService - New item 7) bbb	bbb | $8.00 added successfully.
+05:21:14 [main] INFO  com.revature.misc.MainMenu - Login successful, employee: employee
+05:22:46 [main] INFO  com.revature.services.EmployeeService - Item deletion CANCELLED.
+05:24:04 [main] INFO  com.revature.misc.MainMenu - Login successful, employee: employee
+05:26:26 [main] INFO  com.revature.misc.MainMenu - Login successful, employee: employee
+05:26:35 [main] INFO  com.revature.services.EmployeeService - New item 8) aaa	aaa | $1.00 added successfully.
+05:26:45 [main] INFO  com.revature.services.EmployeeService - New item 9) bbb	bbb | $2.00 added successfully.
+05:35:38 [main] INFO  com.revature.misc.MainMenu - Login successful, employee: employee
+05:36:23 [main] INFO  com.revature.services.EmployeeService - Item 4) sdgf	sgdf | $4.20 DELETED.
+05:36:50 [main] INFO  com.revature.services.EmployeeService - New item 5) aaa	aaa | $4.00 added successfully.
+06:03:30 [main] INFO  com.revature.misc.MainMenu - Login successful, employee: employee
+06:03:51 [main] INFO  com.revature.services.EmployeeService - Logging out of your account, employee. Thanks for checking out RevatureRobins. Have a great day!
+12:40:47 [main] INFO  com.revature.services.CustomerService - AccountCustomer [id=7, firstname=Nestor, lastname=Viana, username=Nest, password=g00se] successfully created!
+12:41:09 [main] INFO  com.revature.misc.MainMenu - Login successful, customer: Nest
+12:41:39 [main] INFO  com.revature.services.CustomerService - Order [order_id=1, customer_id=7, item_id=1, flavor1_id=2, flavor2_id=3] successfully queued!
+12:42:06 [main] INFO  com.revature.services.CustomerService - Logging out of your account, Nest. Thanks for checking out RevatureRobins. Have a great day!
+12:42:52 [main] ERROR com.revature.misc.MainMenu - Login exception was thrown. com.revature.exceptions.LoginException
+12:43:07 [main] INFO  com.revature.misc.MainMenu - Login successful, employee: cturo
+12:44:10 [main] INFO  com.revature.services.EmployeeService - New item 4) large wafer cup	4 scoops of two different flavors on a wafer cup | $6.00 added successfully.
+12:44:43 [main] INFO  com.revature.services.EmployeeService - Item 4) large wafer cup	4 scoops of two different flavors on a wafer cup | $6.00 DELETED.
+12:44:50 [main] INFO  com.revature.services.EmployeeService - Logging out of your account, cturo. Thanks for checking out RevatureRobins. Have a great day!

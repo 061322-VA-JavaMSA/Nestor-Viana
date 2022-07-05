@@ -17,11 +17,12 @@ import com.revature.misc.MainMenu;
 public class Driver {
 	
 	private static Logger log = LogManager.getLogger(Driver.class);
+	
 	static Scanner scan;
 
 	public static void main(String[] args) {
 
-	MainMenu.mainMenu();	
+		MainMenu.mainMenu();	
 		
 	
 	}

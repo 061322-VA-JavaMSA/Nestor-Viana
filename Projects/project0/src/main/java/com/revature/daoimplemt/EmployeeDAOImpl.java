@@ -56,9 +56,10 @@ public class EmployeeDAOImpl implements EmployeeDAO{
 				employee = new Employee();
 				employee.setId(rs.getInt("id"));
 				employee.setFirstname(rs.getString("firstname"));
-				employee.setFirstname(rs.getString("lastname"));
+				employee.setLastname(rs.getString("lastname"));
 				employee.setUsername(rs.getString("username"));
 				employee.setPassword(rs.getString("password"));
+				employee.setRole(rs.getInt("role_type"));
 			}
 			
 		} catch (SQLException e) {
@@ -71,7 +72,7 @@ public class EmployeeDAOImpl implements EmployeeDAO{
 
 	@Override
 	public Employee retrieveEmployeeByUsername(String username) {
-		String sql = "select * from customers where username  = ?;";
+		String sql = "select * from employees where username  = ?;";
 		Employee employee = null;
 		
 		try (Connection c = ConnectionUtil.getConnectionFromEnv();){
@@ -85,9 +86,10 @@ public class EmployeeDAOImpl implements EmployeeDAO{
 				employee = new Employee();
 				employee.setId(rs.getInt("id"));
 				employee.setFirstname(rs.getString("firstname"));
-				employee.setFirstname(rs.getString("lastname"));
+				employee.setLastname(rs.getString("lastname"));
 				employee.setUsername(rs.getString("username"));
 				employee.setPassword(rs.getString("password"));
+				employee.setRole(rs.getInt("role_type"));
 			}
 			
 		} catch (SQLException e) {
@@ -100,7 +102,7 @@ public class EmployeeDAOImpl implements EmployeeDAO{
 
 	@Override
 	public boolean updateEmployee(Employee employee, int id) {
-		String sql = "update customers set firstname = ?, lastname = ?, username = ?, password = ? where id = ?;";
+		String sql = "update employees set firstname = ?, lastname = ?, username = ?, password = ? where id = ?;";
 		int rowsChanged = -1;
 		
 		try(Connection c = ConnectionUtil.getConnectionFromEnv()){

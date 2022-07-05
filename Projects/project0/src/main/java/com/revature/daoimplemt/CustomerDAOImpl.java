@@ -60,6 +60,7 @@ public class CustomerDAOImpl implements CustomerDAO{
 				customer.setFirstname(rs.getString("lastname"));
 				customer.setUsername(rs.getString("username"));
 				customer.setPassword(rs.getString("password"));
+				customer.setRole(rs.getInt("role_type"));
 			}
 			
 		} catch (SQLException e) {
@@ -86,9 +87,10 @@ public class CustomerDAOImpl implements CustomerDAO{
 				customer = new Customer();
 				customer.setId(rs.getInt("id"));
 				customer.setFirstname(rs.getString("firstname"));
-				customer.setFirstname(rs.getString("lastname"));
+				customer.setLastname(rs.getString("lastname"));
 				customer.setUsername(rs.getString("username"));
 				customer.setPassword(rs.getString("password"));
+				customer.setRole(rs.getInt("role_type"));
 			}
 			
 		} catch (SQLException e) {

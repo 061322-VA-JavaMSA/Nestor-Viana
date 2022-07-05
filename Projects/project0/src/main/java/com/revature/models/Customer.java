@@ -9,6 +9,7 @@ public class Customer {
 	private String lastname;
 	private String username;
 	private String password;
+	private int role;
 	
 	public Customer() {
 		
@@ -20,6 +21,23 @@ public class Customer {
 		this.lastname = lastname;
 		this.username = username;
 		this.password = password;
+	}
+	
+	public Customer(int id, String firstname, String lastname, String username, String password) {
+		super();
+		this.id = id;
+		this.firstname = firstname;
+		this.lastname = lastname;
+		this.username = username;
+		this.password = password;
+	}
+	
+	public int getRole() {
+		return role;
+	}
+	
+	public void setRole(int role) {
+		this.role = role;
 	}
 	
 	public int getId() {

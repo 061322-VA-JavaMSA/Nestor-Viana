@@ -27,6 +27,14 @@ public class Items {
 		this.description = description;
 		this.price = price;
 	}
+	
+	public Items(String name, String description, float price) {
+		super();
+		this.name = name;
+		this.description = description;
+		this.price = price;
+	}
+	
 	public Items() {
 		// TODO Auto-generated constructor stub
 	}
@@ -35,7 +43,7 @@ public class Items {
 		List<Items> items = new ArrayList<>();
 		Connection c;
 		System.out.println("Here are the available options:");
-		String sql = "SELECT * FROM menu;";
+		String sql = "SELECT * FROM menu ORDER BY id;";
 		try {
 			c = ConnectionUtil.getConnectionFromEnv();
 			ResultSet rs = c.createStatement().executeQuery(sql);
@@ -60,11 +68,12 @@ public class Items {
 	
 	}
 	
+	//
 	public static ArrayList<Items> itemMenuList() {
 		List<Items> items = new ArrayList<>();
 		Connection c;
-		System.out.println("Here are the available options:");
-		String sql = "SELECT * FROM menu;";
+//		System.out.println("Here are the available options:");
+		String sql = "SELECT * FROM menu ORDER BY id;";
 		try {
 			c = ConnectionUtil.getConnectionFromEnv();
 			ResultSet rs = c.createStatement().executeQuery(sql);
@@ -79,9 +88,6 @@ public class Items {
 				
 			}
 			
-			for(Items item : items) {
-				System.out.println(item);
-			}
 		} catch (SQLException e) {
 			log.error("SQL Exception was thrown. " + e.fillInStackTrace());
 			e.printStackTrace();

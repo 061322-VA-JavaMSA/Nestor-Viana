@@ -13,8 +13,10 @@ import org.apache.logging.log4j.Logger;
 
 import com.revature.exceptions.LoginException;
 import com.revature.models.Customer;
+import com.revature.models.Employee;
 import com.revature.services.AuthService;
 import com.revature.services.CustomerService;
+import com.revature.services.EmployeeService;
 import com.revature.util.ConnectionUtil;
 
 public class MainMenu {
@@ -24,6 +26,7 @@ public class MainMenu {
 	static Connection c;
 	
 	public static void mainMenu() {
+		scan = new Scanner(System.in);
 		
 		AuthService as = new AuthService();
 		
@@ -52,43 +55,84 @@ public class MainMenu {
 			Flavors.flavorMenu();			
 			System.out.println();
 			System.out.println("Please login into your RevatureRobins account before ordering.");
+			mainMenu();
 			break;
 			
 		case "2":
 			
-			System.out.println("Please enter a username.");
-			String username = scan.nextLine();
-			System.out.println("Please enter a password.");
-			String password = scan.nextLine();
-			
-			try {
-				Customer customer = as.loginAuth(username, password);
-				if(customer != null) {
-					System.out.println();
-					log.info("Login successful, user: " + customer.getUsername());
-					CustomerService.customerLoginMenu(customer);
-					
+			System.out.println("Please choose the type of your account: \n1) Customer \n2) Employee");
+			String accountInput;
+			List<String> accInputs = Arrays.asList("1","2");
+			boolean b2;
+			do {
+				accountInput = scan.nextLine();
+				b2 = accInputs.contains(accountInput);
+				if(!b2) {
+					System.out.println("Please enter a valid option.");
 				}
-			} catch (LoginException e) {
-				System.out.println("Invalid credentials.");
-				log.error("Login exception was thrown. " + e.fillInStackTrace());
-				e.printStackTrace();
-			}
+			} while (!b2);
 			
+			switch(accountInput) {
+			case "1":
+				
+				System.out.println("Please enter a username.");
+				String username = scan.nextLine();
+				System.out.println("Please enter a password.");
+				String password = scan.nextLine();
+			
+				try {
+					Customer customer = as.loginAuth(username, password);
+					if(customer != null) {
+						System.out.println();
+						log.info("Login successful, customer: " + customer.getUsername());
+						CustomerService.customerLoginMenu(customer);
+					
+					}
+				} catch (LoginException e) {
+					System.out.println("Invalid credentials.");
+					log.error("Login exception was thrown. " + e.fillInStackTrace());
+					e.printStackTrace();
+				}
+					break;
+				
+			case "2":
+				
+				System.out.println("Please enter a username.");
+				String username2 = scan.nextLine();
+				System.out.println("Please enter a password.");
+				String password2 = scan.nextLine();
+			
+				try {
+					Employee employee = as.loginAuthEmpl(username2, password2);
+					if(employee != null) {
+						System.out.println();
+						log.info("Login successful, employee: " + employee.getUsername());
+						EmployeeService.employeeLoginMenu(employee);
+						}
+				} catch (LoginException e) {
+					System.out.println("Invalid credentials.");
+					log.error("Login exception was thrown. " + e.fillInStackTrace());
+					e.printStackTrace();
+				}
+					break;
+			}
 			break;
+			
 		case "3":
 			
 			CustomerService.create();
+//			mainMenu();
 	
 			break;
 		case "4":
-				System.out.println("Thanks for checking out RevatureRobins. Have a great day!");
+			System.out.println("Thanks for checking out RevatureRobins. Have a great day!");
+			System.exit(0);
 			
 		}
+		
 		scan.close();
 			
 	}
-	
 	
 
 }

@@ -22,11 +22,16 @@ public class Flavors {
 		super();
 	}
 	
+	public Flavors(String flavor) {
+		super();
+		this.flavor = flavor;
+	}
+	
 	public static void flavorMenu() {
 		List<Flavors> flavors = new ArrayList<>();
 		Connection c;
 		System.out.println("Here are the available flavors:");
-		String sql2 = "SELECT * FROM flavors;";
+		String sql2 = "SELECT * FROM flavors ORDER BY id;";
 		try {
 			c = ConnectionUtil.getConnectionFromEnv();
 		
@@ -47,6 +52,31 @@ public class Flavors {
 			log.error("SQL Exception was thrown. " + e.fillInStackTrace());
 			e.printStackTrace();
 		}
+	}
+	
+	public static ArrayList<Flavors> flavorMenuList() {
+		List<Flavors> flavors = new ArrayList<>();
+		Connection c;
+//		System.out.println("Here are the available options:");
+		String sql = "SELECT * FROM flavors ORDER BY id;";
+		try {
+			c = ConnectionUtil.getConnectionFromEnv();
+			ResultSet rs = c.createStatement().executeQuery(sql);
+			while(rs.next()) {
+				Flavors flavor = new Flavors();
+				flavor.setId(rs.getInt("id"));
+				flavor.setFlavor(rs.getString("flavor"));
+					
+				flavors.add(flavor);
+				
+			}
+			
+		} catch (SQLException e) {
+			log.error("SQL Exception was thrown. " + e.fillInStackTrace());
+			e.printStackTrace();
+		}
+		return (ArrayList<Flavors>) flavors;
+	
 	}
 	
 	public int getId() {

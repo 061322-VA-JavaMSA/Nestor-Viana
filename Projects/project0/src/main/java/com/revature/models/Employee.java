@@ -9,6 +9,7 @@ public class Employee {
 	private String lastname;
 	private String username;
 	private String password;
+	private int role;
 	
 	public Employee() {
 		
@@ -86,6 +87,14 @@ public class Employee {
 	public String toString() {
 		return "Employee [id=" + id + ", firstname=" + firstname + ", lastname=" + lastname + ", username=" + username
 				+ ", password=" + password + "]";
+	}
+
+	public int getRole() {
+		return role;
+	}
+
+	public void setRole(int role) {
+		this.role = role;
 	}
 	
 	
