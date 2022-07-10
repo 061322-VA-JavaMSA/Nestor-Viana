@@ -1,5 +1,5 @@
 package com.revature.servlets;
 
-public class EmployeeServlet {
+public class UserServlet {
 
 }

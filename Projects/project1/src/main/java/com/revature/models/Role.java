@@ -1,5 +1,7 @@
 package com.revature.models;
 
-public class Role {
+public enum Role {
+	
+	BASIC_USER, ADMIN;
 
 }
