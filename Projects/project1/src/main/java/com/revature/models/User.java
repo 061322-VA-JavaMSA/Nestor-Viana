@@ -1,10 +1,14 @@
 package com.revature.models;
 
+import java.util.Objects;
+
 public class User {
 	
 	private int id;
 	private String username;
 	private String password;
+	private String firstname;
+	private String lastname;
 	private Role role;
 	
 	public User() {
@@ -44,15 +48,25 @@ public class User {
 		this.role = role;
 	}
 
+	public String getFirstname() {
+		return firstname;
+	}
+
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
+	}
+
+	public String getLastname() {
+		return lastname;
+	}
+
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
+	}
+
 	@Override
 	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + id;
-		result = prime * result + ((password == null) ? 0 : password.hashCode());
-		result = prime * result + ((role == null) ? 0 : role.hashCode());
-		result = prime * result + ((username == null) ? 0 : username.hashCode());
-		return result;
+		return Objects.hash(firstname, id, lastname, password, role, username);
 	}
 
 	@Override
@@ -64,27 +78,18 @@ public class User {
 		if (getClass() != obj.getClass())
 			return false;
 		User other = (User) obj;
-		if (id != other.id)
-			return false;
-		if (password == null) {
-			if (other.password != null)
-				return false;
-		} else if (!password.equals(other.password))
-			return false;
-		if (role != other.role)
-			return false;
-		if (username == null) {
-			if (other.username != null)
-				return false;
-		} else if (!username.equals(other.username))
-			return false;
-		return true;
+		return Objects.equals(firstname, other.firstname) && id == other.id && Objects.equals(lastname, other.lastname)
+				&& Objects.equals(password, other.password) && role == other.role
+				&& Objects.equals(username, other.username);
 	}
 
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", username=" + username + ", password=" + password + ", role=" + role + "]";
+		return "User [id=" + id + ", username=" + username + ", password=" + password + ", firstname=" + firstname
+				+ ", lastname=" + lastname + ", role=" + role + "]";
 	}
+	
+	
 	
 	
 
